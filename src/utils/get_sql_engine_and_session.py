@@ -14,9 +14,8 @@ def get_engine_and_session():
         "port": int(os.environ.get("SQL_PORT")),  
         "database": os.environ.get("SQL_DB_NAME"),
     }
-    print(db_config)
+
     DB_URL = f"postgresql://{db_config['user']}:{db_config['password']}@{db_config['host']}:{db_config['port']}/{db_config['database']}"
-    print(DB_URL)
     # Create a SQLAlchemy engine
     engine = create_engine(DB_URL)
 
