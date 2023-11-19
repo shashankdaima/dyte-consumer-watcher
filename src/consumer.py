@@ -29,4 +29,5 @@ def start_rabbitmq_consumer():
     channel.basic_consume(queue=amqp_queue_name, on_message_callback=on_message_received)
 
     channel.start_consuming()
+
 start_rabbitmq_consumer()
